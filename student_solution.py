@@ -1,45 +1,49 @@
-# student_solution.py
+def task1():
+    s = input()
+    sub1, sub2 = s.split(',')
+    print(len(sub1) > len(sub2))
+    print(sub1 == sub2)
+    print(sub2 in sub1)
 
-# ---------- ЗАДАНИЕ 1 ----------
-def task1(s):
-    # s — строка вида "подстрока1,подстрока2"
-    # вернуть кортеж: (len(sub1) > len(sub2), sub1==sub2, sub2 in sub1)
-    ...
+def task2():
+    s = input()
+    print(s.strip())
+    print(len(s))
+    print(s.count('a'))
+    print(s.replace('a', '@'))
+    print(s.istitle())
 
-# ---------- ЗАДАНИЕ 2 ----------
-def task2(s):
-    # s — любая строка
-    # вернуть кортеж:
-    # (s.strip(), len(s), s.count('a'), s.replace('a','@'), s.istitle())
-    ...
+def task3():
+    s = input()
+    print(s[1:-1])
+    print(s[::2])
+    print(s.lower()[::-1])
 
-# ---------- ЗАДАНИЕ 3 ----------
-def task3(s):
-    # s — строка
-    # вернуть кортеж: (без первого и последнего символа, каждый второй символ, строка.lower() в обратном порядке)
-    ...
+def task4():
+    numbers = list(map(int, input().split()))
+    sorted_numbers = sorted(numbers)
+    print(sorted_numbers)
+    print(sum(numbers))
+    print(min(numbers), max(numbers))
 
-# ---------- ЗАДАНИЕ 4 ----------
-def task4(nums):
-    # nums — список чисел
-    # вернуть кортеж: (отсортированный список, сумма, (min, max))
-    ...
+def task5():
+    s = input()
+    result = (s.lower() == s.lower()[::-1]) and (' ' not in s)
+    print(result)
 
+def task6():
+    n = int(input())
+    hex_str = hex(n)[2:]
+    print(hex_str)
+    print(len(hex_str))
+    print('a' in hex_str)
 
-# ---------- ЗАДАНИЕ 5 ----------
-def task6(s):
-    # s — строка
-    # вернуть True если палиндром (без учёта регистра) и нет пробелов, иначе False
-    ...
+def task7():
+    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    n = int(input())
+    print(months[n-1])
 
-# ---------- ЗАДАНИЕ 6 ----------
-def task7(n):
-    # n — целое число
-    # вернуть кортеж: (hex(n) без '0x', len(hex), True если 'a' есть в hex)
-    ...
+if __name__ == "__main__":
+    pass
 
-# ---------- ЗАДАНИЕ 7 ----------
-def task8(month_num):
-    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    # вернуть название месяца по номеру (1-12)
-    ...
